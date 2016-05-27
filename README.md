@@ -3,7 +3,12 @@ a brainfuck just-in-time compiler written in python with llvmlite
 
 ## About
 
-This simple program parse a brainfuck source file, prints its llvm ir representation without and with optimizations, and then runs it as machine code.
+This simple program does the following:
+
+* parse a brainfuck source file
+* build an llvm ir representation of the program and prints it
+* optimize said llvm ir and prints it
+* runs it as machine code
 
 ## Dependencies
 
