@@ -157,7 +157,7 @@ if __name__ == "__main__":
     with llvm.create_mcjit_compiler(llvm_module, tm) as ee:
         ee.finalize_object()
 
-        cfptr = ee.get_pointer_to_function(llvm_module.get_function("func"))
+        cfptr = ee.get_function_address("func")
         cfunc = CFUNCTYPE(None)(cfptr)
 
         print("=== START")
